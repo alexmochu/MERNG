@@ -11,7 +11,6 @@ function Home() {
     data
   } = useQuery(FETCH_POSTS_QUERY);
 
-  console.log('helooo', data)
   return (
     <Grid columns={3}>
       <Grid.Row className="page-title">
