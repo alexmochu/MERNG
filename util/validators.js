@@ -1,6 +1,7 @@
 module.exports.validateRegisterInput = (
   username,
   email,
+  role,
   password,
   confirmPassword
 ) => {

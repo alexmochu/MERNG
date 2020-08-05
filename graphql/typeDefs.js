@@ -6,6 +6,7 @@ module.exports = gql`
     body: String!
     createdAt: String!
     username: String!
+    status: String!
     comments: [Comment]!
     likes: [Like]!
     likeCount: Int!
@@ -27,12 +28,14 @@ module.exports = gql`
     email: String!
     token: String!
     username: String!
+    role: String!
     createdAt: String!
   }
   input RegisterInput {
     username: String!
     password: String!
     confirmPassword: String!
+    role: String
     email: String!
   }
   type Query {

@@ -37,15 +37,16 @@ module.exports = {
       const newPost = new Post({
         body,
         user: user.id,
+        status: 'draft',
         username: user.username,
         createdAt: new Date().toISOString()
       });
 
       const post = await newPost.save();
 
-      context.pubsub.publish('NEW_POST', {
-        newPost: post
-      });
+      // context.pubsub.publish('NEW_POST', {
+      //   newPost: post
+      // });
 
       return post;
     },
